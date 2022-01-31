@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ page.title }}</h1><br>
+
+    <h3>{{ page.introduccion }}</h3><br>
+
+
+    {% for pelis in peliculas %}
+    <ol>
+        <li style="list-style: none;"><img src="{{ pelis.imagen }}"> {{ pelis.place }}. {{ pelis.title }} ({{ pelis.year }}) <br>Rating ----> {{ pelis.rating }}<br>Reparto ----> {{ pelis.cast }}<br>Mas Información ----> {{ pelis.link }}</li><br>
+    </ol>
+
+    {% endfor %}
+</div>
+{% endblock %}

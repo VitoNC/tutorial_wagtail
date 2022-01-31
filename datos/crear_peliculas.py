@@ -15,10 +15,10 @@ for p in Pelicula.objects.all():
     p.delete()
 
 #lista de películas del json
-if os.path.exists("datos/datos_pelis.json"):
-    pelis = json.load(open("datos/datos_pelis.json"))
+if os.path.exists("datos/datos_pelis_plus.json"):
+    pelis = json.load(open("datos/datos_pelis_plus.json"))
 else:
-    pelis = json.load(open("datos_pelis.json"))
+    pelis = json.load(open("datos_pelis_plus.json"))
 
 
 '''
@@ -34,9 +34,9 @@ else:
 for p1 in pelis:
     p = Pelicula()
     p.title = p1["titulo"]
-    p.rating = 0 # p1["rating"]
+    p.rating = p1["rating"].replace(',', '.')
     p.link = "https://www.imdb.com" + p1["url"]
-    p.place = 0 #p1["place"]
+    p.place = p1["ranking"]
     year = p1["year"]
     if year.isdigit():
         p.year = p1["year"]

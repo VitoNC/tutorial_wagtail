@@ -17,7 +17,7 @@ from wagtail.snippets.models import register_snippet
 class Pelicula(models.Model):
     title = models.CharField('título', max_length=250)
     #slug = models.SlugField()
-    rating = models.DecimalField(max_digits=6, decimal_places=4)
+    rating = models.DecimalField(max_digits=4, decimal_places=2)
     link = models.URLField()
     place = models.IntegerField()
     year = models.IntegerField()
