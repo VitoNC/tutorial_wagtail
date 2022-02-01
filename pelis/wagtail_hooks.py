@@ -25,8 +25,15 @@ class PelisAdmin(ModelAdmin):
     # rather than under the default Snippets section.
     model = Pelicula
     search_fields = ('title', 'cast', 'year')
-    menu_icon = 'media'  # change as required
+    menu_icon = 'media' 
     menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
+
+class PelisAdminGroup(ModelAdminGroup):
+    
+    menu_icon = 'media' 
+    items = ()
+
+
 
 
 # When using a ModelAdminGroup class to group several ModelAdmin classes together,

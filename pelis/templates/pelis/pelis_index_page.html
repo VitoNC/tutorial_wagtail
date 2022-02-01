@@ -8,14 +8,31 @@
 <div class="container">
     <h1>{{ page.title }}</h1><br>
 
-    <h3>{{ page.introduccion }}</h3><br>
+    <p>Listado de las mejores 250 películas según IMDB:</p>
+    <hr>
+    <a href="">Listado Decada de los 90</a>
+    <hr>
+
 
 
     {% for pelis in peliculas %}
     <ol>
-        <li style="list-style: none;"><img src="{{ pelis.imagen }}"> {{ pelis.place }}. {{ pelis.title }} ({{ pelis.year }}) <br>Rating ----> {{ pelis.rating }}<br>Reparto ----> {{ pelis.cast }}<br>Mas Información ----> {{ pelis.link }}</li><br>
+        <li style="list-style: none;">{{ pelis.place }}. <a href="{{ pelis.link }}">{{ pelis.title }}</a> ({{ pelis.year }})<br><img src="{{ pelis.imagen }}">  &#9733; {{ pelis.rating }}<br>Reparto: {{ pelis.cast }}</li>
+        <hr>
     </ol>
 
     {% endfor %}
 </div>
+
+
+
+{% if peliculas.paginator.count > 1 %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% include "includes/pagination.html" with subpages=peliculas %}
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}

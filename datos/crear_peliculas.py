@@ -10,6 +10,7 @@ from pelis.models import Pelicula
 import json
 import os
 
+
 # borrar pelis
 for p in Pelicula.objects.all():
     p.delete()
