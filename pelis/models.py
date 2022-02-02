@@ -14,12 +14,26 @@ from wagtail.snippets.models import register_snippet
 ## Page que mostrará el index de las películas
 ## Hereda solo de Home y no descendientes
 
-## Modelo para películas
 
+# Modelo Género Pelicula
+class Genre(models.Model):
+    nombre = models.CharField(max_length=50, unique=True)
+    def __str__(self):
+        return self.nombre
+    panels = [
+        FieldPanel('nombre')
+    ]
+    class Meta:
+        verbose_name = 'Género'
+        verbose_name_plural = 'Géneros'
+
+
+
+## Modelo para películas
 
 class Pelicula(models.Model):
     title = models.CharField('título', max_length=250)
-    #slug = models.SlugField()
+    slug = models.SlugField(blank=True)
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     link = models.URLField()
     place = models.IntegerField()
@@ -27,6 +41,7 @@ class Pelicula(models.Model):
     imagen = models.URLField()
     cast = models.CharField(max_length = 250, 
         help_text='Introduzca nombres separados por comas')
+    generos = models.ManyToManyField(Genre)
 
     panels = [
         FieldPanel('title'),
@@ -35,7 +50,8 @@ class Pelicula(models.Model):
         FieldPanel('place'),
         FieldPanel('year'),
         FieldPanel('imagen'),
-        FieldPanel('cast')
+        FieldPanel('cast'),
+        FieldPanel('generos')
     ]
     def __str__(self):
         return f'{self.title} ({self.year})'
@@ -51,19 +67,12 @@ class PelisIndexPage(Page):
     ]
 
 
-    subpage_type = ['PelisPage']
-
-
-
     def get_pelis(self):
         return Pelicula.objects.all()
 
-    def children(self):
-        return self.get_children().specific().live()
 
     def paginate(self, request):
         page = request.GET.get('page')
-
         decada = request.GET.get('decada')
 
         if decada:
@@ -90,6 +99,7 @@ class PelisIndexPage(Page):
         pelis = self.paginate(request)
 
         context['peliculas'] = pelis
+
         
         return context
     

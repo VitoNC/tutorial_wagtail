@@ -10,14 +10,14 @@
 
     <p>Listado de las mejores 250 películas según IMDB:</p>
     <hr>
-    <a href="">Listado Decada de los 90</a>
+    <p><a href="?decada=90">Listado Decada de los 90</a></p>
     <hr>
 
 
 
     {% for pelis in peliculas %}
     <ol>
-        <li style="list-style: none;">{{ pelis.place }}. <a href="{{ pelis.link }}">{{ pelis.title }}</a> ({{ pelis.year }})<br><img src="{{ pelis.imagen }}">  &#9733; {{ pelis.rating }}<br>Reparto: {{ pelis.cast }}</li>
+        <li style="list-style: none;">{{ pelis.place }}. <a href="{{ pelis.link }}">{{ pelis.title }}</a> ({{ pelis.year }})<br><img src="{{ pelis.imagen }}"> &#9733; {{ pelis.rating }}<br>Reparto: {{ pelis.cast }}</li>
         <hr>
     </ol>
 
