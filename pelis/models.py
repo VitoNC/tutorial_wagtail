@@ -67,20 +67,12 @@ class PelisIndexPage(Page):
     ]
 
 
-    def get_pelis(self):
-        return Pelicula.objects.all()
 
-
-    def paginate(self, request):
+    def paginate(self, request, peliculas, *args):
         page = request.GET.get('page')
-        decada = request.GET.get('decada')
-
-        if decada:
-            peliculas = Pelicula.objects.filter(year__gte=1990, year__lt=2000)
-        else:
-            peliculas = Pelicula.objects.all()
 
         paginator = Paginator(peliculas, 25)
+
         try:
             pages = paginator.page(page)
         except PageNotAnInteger:
@@ -94,11 +86,18 @@ class PelisIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
+        decada = request.GET.get('decada')
+        qs = ''
 
-        # BreadPage objects (get_breads) are passed through pagination
-        pelis = self.paginate(request)
+        if decada:
+            peliculas = Pelicula.objects.filter(year__gte=1990, year__lt=2000)
+            qs = f'decada={decada}'
+        else:
+            peliculas = Pelicula.objects.all()
+            
 
-        context['peliculas'] = pelis
+        context['peliculas'] = self.paginate(request, peliculas)
+        context['qs'] = qs
 
         
         return context

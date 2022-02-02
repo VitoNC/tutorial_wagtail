@@ -10,3 +10,5 @@ else:
     pelis = json.load(open("datos_pelis2.json"))
 
 # Recorre datos del json
+for p in pelis:
+    slug = slugify(f'{p["titulo"]}') (p["year"])
