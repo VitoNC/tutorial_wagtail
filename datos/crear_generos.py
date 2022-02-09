@@ -13,9 +13,9 @@ import os
 
 #lista de películas del json
 if os.path.exists("datos/datos_pelis2.json"):
-    pelis = json.load(open("datos/datos_pelis2.json"))
+    pelis = json.load(open("datos/datos_pelis_plus.json"))
 else:
-    pelis = json.load(open("datos_pelis2.json"))
+    pelis = json.load(open("datos_pelis_plus.json"))
 
 # recorre datos del json
 for p in pelis:

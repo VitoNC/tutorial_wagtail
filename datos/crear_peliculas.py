@@ -9,6 +9,7 @@ python manage.py shell < datos/crear_peliculas.py
 from pelis.models import Pelicula
 import json
 import os
+from django.template.defaultfilters import slugify
 
 
 # borrar pelis
@@ -45,4 +46,6 @@ for p1 in pelis:
         p.year = 0
     p.imagen = p1["img"]
     p.cast = p1['cast']
+    p.slug = slugify(f'{p.title} ({p.year})')
+
     p.save()

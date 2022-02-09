@@ -45,6 +45,7 @@ class Pelicula(models.Model):
 
     panels = [
         FieldPanel('title'),
+        FieldPanel('slug'),
         FieldPanel('rating'),
         FieldPanel('link'),
         FieldPanel('place'),
