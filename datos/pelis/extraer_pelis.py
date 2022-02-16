@@ -97,3 +97,26 @@ if __name__ == '__main__':
 
     datos = [datos_peli(p) for p in peliculas]
     json.dump(datos, open('datos_pelis_plus.json', 'w'))
+
+
+
+# Automatizar Autenticación en sitios Web
+
+
+# sesion = requests.session()
+
+#urllogin = 'http://localhost:8000/admin/login/'
+
+#datos = {}
+#datos['username'] = 'usuario'
+#datos['password'] = 'contraseña'
+
+
+#respuesta = sesion.get(url)
+
+#doc = html.fromstring(respuesta.content)
+
+#datos['csrfmiddlewaretoken'] = doc.xpath("//input[@name='csrfmiddlewaretoken']/value")
+
+#resp = sesion.post(urllogin, data = datos)
+

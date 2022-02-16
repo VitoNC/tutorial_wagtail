@@ -1,3 +1,4 @@
+import email
 from django.db import models
 from django import forms
 
@@ -110,3 +111,15 @@ class BlogCategory(models.Model):
     class Meta:
         verbose_name_plural = 'categorías de blog'
         verbose_name = 'categoría de blog'
+
+
+class Contacto(Page):
+    name = models.CharField(max_length=40)
+    email = models.CharField(max_length=40)
+    mensaje = models.TextField()
+
+    content_panels = Page.content_panels + [
+        FieldPanel('name'),
+        FieldPanel('email'),
+        FieldPanel('mensaje')
+    ]
