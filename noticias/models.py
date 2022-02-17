@@ -1,3 +1,4 @@
+from email.mime import image
 from django.db import models
 from django import forms
 
@@ -18,6 +19,7 @@ from wagtail.search import index
 class NoticiasIndexPage(Page):
     introduccion = RichTextField(blank=True)
 
+
     content_panels = Page.content_panels + [
         FieldPanel('introduccion', classname="full")
     ]
@@ -25,7 +27,7 @@ class NoticiasIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
-        blogpages = self.get_children().live().order_by('-first_published_at')
+        noticiaspages = self.get_children().live().order_by('-first_published_at')
         context['noticiaspages'] = noticiaspages
         
         return context
@@ -34,6 +36,7 @@ class NoticiasPage(Page):
     date = models.DateField("Fecha Noticia")
     intro = models.CharField("Introducción", max_length=250)
     body = RichTextField(blank=True)
+    portada = models.ImageField()
 
 
     search_fields = Page.search_fields + [
@@ -42,6 +45,8 @@ class NoticiasPage(Page):
     ]
 
     content_panels = Page.content_panels + [
+        FieldPanel('portada'),
+
         MultiFieldPanel([
             FieldPanel('date'),
             ],
