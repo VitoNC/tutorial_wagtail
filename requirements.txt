@@ -7,6 +7,7 @@ black==21.12b0
 certifi==2021.10.8
 charset-normalizer==2.0.10
 click==8.0.3
+colorama==0.4.4
 decorator==5.1.1
 Django==3.2.11
 django-filter==21.1
@@ -46,7 +47,7 @@ tablib==3.1.0
 telepath==0.2
 tomli==1.2.3
 traitlets==5.1.1
-typing-extensions==4.0.1
+typing_extensions==4.0.1
 urllib3==1.26.8
 wagtail==2.15.1
 wcwidth==0.2.5

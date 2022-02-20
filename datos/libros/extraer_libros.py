@@ -7,6 +7,7 @@ Trabajo:
 * Extraer los datos de las películas con xpath
 '''
 
+from pydoc import synopsis
 import requests
 from lxml import html
 from urllib.parse import urljoin
@@ -16,8 +17,8 @@ headers = {"Accept-Language": "es-es,es;q=0.5"}
 
 
 
-def detalle(url_peli):
-    url = urljoin ('https://www.imdb.com', url_peli)
+def detalle(url_libro):
+    url = urljoin ('https://www.todostuslibros.com/libros', url_libro)
     
     response = requests.get(url, headers=headers)
     pagina = html.fromstring(response.text)
@@ -36,7 +37,7 @@ def detalle(url_peli):
     return datos
 
 
-def datos_peli(peli):
+def datos_libro(libro):
     ''''
     Función que dado un elemento tr de imdb con 
     los datos de una película devuelve un diccionario
@@ -45,63 +46,78 @@ def datos_peli(peli):
     # datos a devolver
     datos = {}
 
-    elementos = peli.xpath(".//td")
-    imagen = elementos[0]
-    titulo = elementos[1]
-    rating = elementos[2]
+    content = libro.xpath(".//div[@class='book-content']")
+    action = libro.xpath(".//div[@class='book-action']")
 
 
+    imagen = content.xpath(".//div[@class='book-image']")
+    elementos = content.xpath(".//div[@class='book-details']")
 
+    price = action.xpath(".//div[@class='book-price']")
+    location = action.xpath(".//div[@class='book-location']")
 
-    #imagen
-    imagensrc = imagen.xpath(".//img/@src")[0]
-    datos['img'] = imagensrc
 
     # url de la peli
-    url = titulo.xpath(".//a/@href")[0]
+    url = imagen.xpath(".//a/@href")[0]
     datos['url'] = url
 
+    #imagen
+    imagensrc = imagen.xpath(".//a/img/@src")[0]
+    datos['img'] = imagensrc
+    
+    # rank
+    rank = imagen.xpath(".//a/span/text()")[0]
+    datos['rank'] = rank
 
-
-    # cast
-    cast = titulo.xpath(".//a/@title")[0]
-    datos['cast'] = cast
 
     # titulo
-    titulo_ = titulo.xpath(".//a/text()")[0]
-    datos['titulo'] = titulo_
+    titulo = elementos.xpath(".//h2[@class='title']/text()")[0]
+    datos['title'] = titulo
 
-    # año
-    year = titulo.xpath(".//span/text()")[0].replace("(", "").replace(')', '')
-    datos['year'] = year
+    # autor
+    autor = elementos.xpath(".//h3[@class='author']/a/text()")[0]
+    datos['author'] = autor
 
-    # ranking 
-    pospunto = titulo.text_content().find('.')
-    ranking = titulo.text_content()[:pospunto].strip()
-    datos['ranking'] = ranking
+    # datosAutor
+    urlAutor = elementos.xpath(".//h3[@class='author']/a/@href")[0]
+    datos['urlAuthor'] = urlAutor
 
-    # rating 
-    rating_ = rating.xpath(".//strong/text()")[0]
-    datos['rating'] = rating_
-    
+    # sinopsis
+    sinopsis = elementos.xpath(".//p[@class='synopsis d-none']/text()")[0]
+    datos['synopsis'] = sinopsis
+
+    # editorial
+    editorial = elementos.xpath(".//p[@class='data']/text()")[0]
+    datos['editorial'] = editorial
+
+
+    # precio
+    precio = price.xpath(".//text()")[0]
+    datos['price'] = precio
+
+    # location
+    compra = location.xpath(".//text()")[0]
+    datos['location'] = compra
+
+
     datos.update(detalle(url))
 
     return datos
 
 if __name__ == '__main__':
 
-    url = 'https://www.imdb.com/chart/top/'
+    url = 'https://www.todostuslibros.com/mas_vendidos'
     
     response = requests.get(url, headers=headers)
     pagina = html.fromstring(response.text)
 
-    peliculas = pagina.xpath("//table[@data-caller-name='chart-top250movie']/tbody/tr")
+    libros = pagina.xpath("//ul[@class='books']/li")
 
     # test
-    assert(len(peliculas) == 250)
+    #assert(len(libros) == 100)
 
-    datos = [datos_peli(p) for p in peliculas]
-    json.dump(datos, open('datos_pelis_plus.json', 'w'))
+    datos = [datos_libro(l) for l in libros]
+    json.dump(datos, open('datos_libros.json', 'w'))
 
 
 
