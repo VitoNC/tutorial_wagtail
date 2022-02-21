@@ -1,6 +1,7 @@
 [
     {
         "url": "https://www.todostuslibros.com/libros/el-libro-negro-de-las-horas_978-84-08-25285-6",
+        "rank": "1",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825285.gif",
         "title": "El Libro Negro de las Horas",
         "subtitle": "",
@@ -12,6 +13,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/violeta_978-84-01-02747-5",
+        "rank": "2",
         "image": "https://static.cegal.es/imagenes/marcadas/9788401/978840102747.gif",
         "title": "Violeta",
         "subtitle": "",
@@ -23,6 +25,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/por-si-las-voces-vuelven_978-84-08-24921-4",
+        "rank": "3",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840824921.gif",
         "title": "Por si las voces vuelven",
         "subtitle": "",
@@ -34,6 +37,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/una-historia-ridicula_978-84-1107-069-0",
+        "rank": "4",
         "image": "https://static.cegal.es/imagenes/marcadas/9788411/978841107069.gif",
         "title": "Una historia rid\u00edcula",
         "subtitle": "",
@@ -45,6 +49,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/trilogia-fuego-1-ciudades-de-humo_978-84-08-25185-9",
+        "rank": "5",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825185.gif",
         "title": "Trilog\u00eda Fuego 1. Ciudades de humo",
         "subtitle": "",
@@ -56,6 +61,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/a-traves-de-mi-ventana-trilogia-hermanos-hidalgo-1_978-84-204-5191-6",
+        "rank": "6",
         "image": "https://static.cegal.es/imagenes/marcadas/9788420/978842045191.gif",
         "title": "A trav\u00e9s de mi ventana (Trilog\u00eda Hermanos Hidalgo 1)",
         "subtitle": "",
@@ -67,6 +73,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/encuentra-tu-persona-vitamina_978-84-670-6221-2",
+        "rank": "7",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846706221.gif",
         "title": "Encuentra tu persona vitamina",
         "subtitle": "",
@@ -78,6 +85,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-principe-de-la-niebla_978-84-08-07280-5",
+        "rank": "8",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840807280.gif",
         "title": "El Pr\u00edncipe de la Niebla",
         "subtitle": "",
@@ -89,6 +97,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-senora-march_978-84-264-0965-2",
+        "rank": "9",
         "image": "https://static.cegal.es/imagenes/marcadas/9788426/978842640965.gif",
         "title": "La se\u00f1ora March",
         "subtitle": "",
@@ -100,6 +109,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/como-hacer-que-te-pasen-cosas-buenas_978-84-670-5330-2",
+        "rank": "10",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846705330.gif",
         "title": "C\u00f3mo hacer que te pasen cosas buenas",
         "subtitle": "Entiende tu cerebro, gestiona tus emociones, mejora tu vida",
@@ -111,6 +121,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-bestia_978-84-08-24984-9",
+        "rank": "11",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840824984.gif",
         "title": "La Bestia",
         "subtitle": "Premio Planeta 2021",
@@ -122,6 +133,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/nosotros-en-la-luna_978-84-08-23738-9",
+        "rank": "12",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840823738.gif",
         "title": "Nosotros en la luna",
         "subtitle": "",
@@ -133,6 +145,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/las-formas-del-querer_978-84-233-6089-5",
+        "rank": "13",
         "image": "https://static.cegal.es/imagenes/marcadas/9788423/978842336089.gif",
         "title": "Las formas del querer",
         "subtitle": "Premio Nadal de Novela 2022",
@@ -144,6 +157,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/antes-de-diciembre_978-84-18483-44-8",
+        "rank": "14",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841848344.gif",
         "title": "Antes de diciembre",
         "subtitle": "",
@@ -155,6 +169,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/ultimos-dias-en-berlin_978-84-08-24985-6",
+        "rank": "15",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840824985.gif",
         "title": "\u00daltimos d\u00edas en Berl\u00edn",
         "subtitle": "Finalista Premio Planeta 2021",
@@ -166,6 +181,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/malas-mujeres_978-84-264-0969-0",
+        "rank": "16",
         "image": "https://static.cegal.es/imagenes/marcadas/9788426/978842640969.gif",
         "title": "Malas mujeres",
         "subtitle": "",
@@ -177,6 +193,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-principito-edicion-oficial_978-84-9838-149-8",
+        "rank": "17",
         "image": "https://static.cegal.es/imagenes/marcadas/9788498/978849838149.gif",
         "title": "El Principito (edici\u00f3n oficial)",
         "subtitle": "",
@@ -188,6 +205,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/obra-maestra_978-84-339-9941-2",
+        "rank": "18",
         "image": "https://static.cegal.es/imagenes/marcadas/9788433/978843399941.gif",
         "title": "Obra maestra",
         "subtitle": "",
@@ -199,6 +217,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-cuenta-atras-para-el-verano_978-84-480-2883-1",
+        "rank": "19",
         "image": "https://static.cegal.es/imagenes/marcadas/9788448/978844802883.gif",
         "title": "La cuenta atr\u00e1s para el verano",
         "subtitle": "La vida son recuerdos y los m\u00edos tienen nombres de persona",
@@ -210,6 +229,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/nunca_978-84-01-02705-5",
+        "rank": "20",
         "image": "https://static.cegal.es/imagenes/marcadas/9788401/978840102705.gif",
         "title": "Nunca",
         "subtitle": "Por el autor de Los pilares de la Tierra",
@@ -221,6 +241,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-patria-en-la-cartera_978-84-344-3478-3",
+        "rank": "21",
         "image": "https://static.cegal.es/imagenes/marcadas/9788434/978843443478.gif",
         "title": "La patria en la cartera",
         "subtitle": "Pasado y presente de la corrupci\u00f3n en Espa\u00f1a",
@@ -232,6 +253,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/un-cuento-perfecto_978-84-663-5481-3",
+        "rank": "22",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846635481.gif",
         "title": "Un cuento perfecto",
         "subtitle": "",
@@ -243,6 +265,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/tokyo-revengers-03_978-84-679-4709-0",
+        "rank": "23",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846794709.gif",
         "title": "TOKYO REVENGERS 03",
         "subtitle": "",
@@ -254,6 +277,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/hamnet_978-84-17977-58-0",
+        "rank": "24",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841797758.gif",
         "title": "Hamnet",
         "subtitle": "",
@@ -265,6 +289,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-poder_978-84-124739-1-9",
+        "rank": "25",
         "image": "https://static.cegal.es/imagenes/marcadas/9788412/978841247391.gif",
         "title": "El poder",
         "subtitle": "Un estratega lee a Maquiavelo",
@@ -276,6 +301,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-italiano_978-84-204-6049-9",
+        "rank": "26",
         "image": "https://static.cegal.es/imagenes/marcadas/9788420/978842046049.gif",
         "title": "El italiano",
         "subtitle": "",
@@ -287,6 +313,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/hasta-que-se-me-acaben-las-palabras_978-84-03-52271-8",
+        "rank": "27",
         "image": "https://static.cegal.es/imagenes/marcadas/9788403/978840352271.gif",
         "title": "Hasta que se me acaben las palabras",
         "subtitle": "Recuerdos de un gallego que se enamor\u00f3 de la radio",
@@ -298,6 +325,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/chainsaw-man-11_978-84-679-4800-4",
+        "rank": "28",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846794800.gif",
         "title": "CHAINSAW MAN 11",
         "subtitle": "",
@@ -309,6 +337,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/invisible_978-84-16588-43-5",
+        "rank": "29",
         "image": "https://static.cegal.es/imagenes/marcadas/9788416/978841658843.gif",
         "title": "Invisible",
         "subtitle": "",
@@ -320,6 +349,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/todo-lo-que-nunca-fuimos_978-84-08-22195-1",
+        "rank": "30",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840822195.gif",
         "title": "Todo lo que nunca fuimos",
         "subtitle": "",
@@ -331,6 +361,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/guardianes-de-la-noche-01_978-84-679-3532-5",
+        "rank": "31",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846793532.gif",
         "title": "GUARDIANES DE LA NOCHE 01",
         "subtitle": "",
@@ -342,6 +373,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/un-reino-de-carne-y-fuego_978-84-17854-36-2",
+        "rank": "32",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841785436.gif",
         "title": "Un reino de carne y fuego",
         "subtitle": "",
@@ -353,6 +385,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/a-traves-de-ti-trilogia-hermanos-hidalgo-2_978-84-18483-50-9",
+        "rank": "33",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841848350.gif",
         "title": "A trav\u00e9s de ti (Trilog\u00eda Hermanos Hidalgo 2)",
         "subtitle": "",
@@ -364,6 +397,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/no-tengas-miedo-a-nada_978-84-08-25087-6",
+        "rank": "34",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825087.gif",
         "title": "No tengas miedo a nada",
         "subtitle": "Cumple tus deseos con amor, alegr\u00eda y paz interior",
@@ -375,6 +409,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/no-soy-yo_978-84-233-6057-4",
+        "rank": "35",
         "image": "https://static.cegal.es/imagenes/marcadas/9788423/978842336057.gif",
         "title": "No soy yo",
         "subtitle": "",
@@ -386,6 +421,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/haikyu-no-04_978-84-9174-767-3",
+        "rank": "36",
         "image": "https://static.cegal.es/imagenes/marcadas/9788491/978849174767.gif",
         "title": "Haiky\u00fb!! n\u00ba 04",
         "subtitle": "",
@@ -397,6 +433,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/por-que-me-duele-la-tripa_978-84-08-25092-0",
+        "rank": "37",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825092.gif",
         "title": "\u00bfPor qu\u00e9 me duele la tripa?",
         "subtitle": "Reparaci\u00f3n digestiva, microbiota, adelgazamiento y salud",
@@ -408,6 +445,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-infinito-en-un-junco_978-84-17860-79-0",
+        "rank": "38",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841786079.gif",
         "title": "El infinito en un junco",
         "subtitle": "La invenci\u00f3n de los libros en el mundo antiguo",
@@ -419,6 +457,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/compas-6-los-compas-y-la-entidad-exe_978-84-270-4882-9",
+        "rank": "39",
         "image": "https://static.cegal.es/imagenes/marcadas/9788427/978842704882.gif",
         "title": "Compas 6. Los Compas y la Entidad.Exe",
         "subtitle": "",
@@ -430,6 +469,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/proyecto-silverview_978-84-08-25181-1",
+        "rank": "40",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825181.gif",
         "title": "Proyecto Silverview",
         "subtitle": "",
@@ -441,6 +481,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-valle-de-los-arcangeles_978-84-670-6353-0",
+        "rank": "41",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846706353.gif",
         "title": "El valle de los arc\u00e1ngeles",
         "subtitle": "",
@@ -452,6 +493,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/codigo-civil_978-84-309-8268-4",
+        "rank": "42",
         "image": "https://static.cegal.es/imagenes/marcadas/9788430/978843098268.gif",
         "title": "C\u00f3digo Civil",
         "subtitle": "",
@@ -463,6 +505,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-poder-del-ahora_978-84-8445-206-5",
+        "rank": "43",
         "image": "https://static.cegal.es/imagenes/marcadas/9788484/978848445206.gif",
         "title": "El poder del ahora",
         "subtitle": "Una gu\u00eda para la iluminaci\u00f3n espiritual",
@@ -474,6 +517,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/de-ninguna-parte_978-84-01-02492-4",
+        "rank": "44",
         "image": "https://static.cegal.es/imagenes/marcadas/9788401/978840102492.gif",
         "title": "De ninguna parte",
         "subtitle": "",
@@ -485,6 +529,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/me-quiero-te-quiero_978-84-02-42458-7",
+        "rank": "45",
         "image": "https://static.cegal.es/imagenes/marcadas/9788402/978840242458.gif",
         "title": "Me quiero, te quiero",
         "subtitle": "Una gu\u00eda para desarrollar relaciones sanas (y mejorar las que ya tienes)",
@@ -496,6 +541,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/los-150-chistes-favoritos-de-timba-vk_978-84-270-4928-4",
+        "rank": "46",
         "image": "https://static.cegal.es/imagenes/marcadas/9788427/978842704928.gif",
         "title": "Los 150 chistes favoritos de Timba Vk",
         "subtitle": "",
@@ -507,6 +553,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-forja-de-una-rebelde_978-84-233-6042-0",
+        "rank": "47",
         "image": "https://static.cegal.es/imagenes/marcadas/9788423/978842336042.gif",
         "title": "La forja de una rebelde",
         "subtitle": "",
@@ -518,6 +565,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/jojo-s-bizarre-adventure-42-steel-ball-run-03_978-84-19185-20-4",
+        "rank": "48",
         "image": "https://static.cegal.es/imagenes/marcadas/9788419/978841918520.gif",
         "title": "JOJO'S BIZARRE ADVENTURE 42: STEEL BALL RUN 03",
         "subtitle": "",
@@ -529,6 +577,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-hombre-en-busca-de-sentido_978-84-254-3202-6",
+        "rank": "49",
         "image": "https://static.cegal.es/imagenes/marcadas/9788425/978842543202.gif",
         "title": "El hombre en busca de sentido",
         "subtitle": "",
@@ -540,6 +589,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/perfectos-mentirosos-perfectos-mentirosos-1_978-84-18057-61-8",
+        "rank": "50",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841805761.gif",
         "title": "Perfectos mentirosos (Perfectos Mentirosos 1)",
         "subtitle": "",
@@ -551,6 +601,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/deja-de-ser-tu_978-84-7953-825-5",
+        "rank": "51",
         "image": "https://static.cegal.es/imagenes/marcadas/9788479/978847953825.gif",
         "title": "Deja de ser t\u00fa",
         "subtitle": "",
@@ -562,6 +613,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/tokyo-revengers-01_978-84-679-4707-6",
+        "rank": "52",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846794707.gif",
         "title": "TOKYO REVENGERS 01",
         "subtitle": "",
@@ -573,6 +625,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/politicamente-indeseable_978-84-666-6999-3",
+        "rank": "53",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846666999.gif",
         "title": "Pol\u00edticamente indeseable",
         "subtitle": "",
@@ -584,6 +637,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-vida-va-de-esto_978-84-08-25290-0",
+        "rank": "54",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825290.gif",
         "title": "La vida va de esto",
         "subtitle": "",
@@ -595,6 +649,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/habitos-atomicos_978-84-18118-03-6",
+        "rank": "55",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841811803.gif",
         "title": "H\u00e1bitos at\u00f3micos",
         "subtitle": "Cambios peque\u00f1os, resultados extraordinarios",
@@ -606,6 +661,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-madre-de-frankenstein_978-84-1107-055-3",
+        "rank": "56",
         "image": "https://static.cegal.es/imagenes/marcadas/9788411/978841107055.gif",
         "title": "La madre de Frankenstein",
         "subtitle": "",
@@ -617,6 +673,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/mi-amor-de-wattpad_978-84-08-25342-6",
+        "rank": "57",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825342.gif",
         "title": "Mi amor de Wattpad",
         "subtitle": "",
@@ -628,6 +685,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/sin-miedo_978-84-253-6110-4",
+        "rank": "58",
         "image": "https://static.cegal.es/imagenes/marcadas/9788425/978842536110.gif",
         "title": "Sin miedo",
         "subtitle": "El m\u00e9todo comprobado para superar la ansiedad, las obsesiones, la hipocondr\u00eda y cualquier temor irracional",
@@ -639,6 +697,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/marfil-enfrentados-1_978-84-1314-280-7",
+        "rank": "59",
         "image": "https://static.cegal.es/imagenes/marcadas/9788413/978841314280.gif",
         "title": "Marfil (Enfrentados 1)",
         "subtitle": "",
@@ -650,6 +709,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/deshacer-la-ansiedad_978-84-493-3899-1",
+        "rank": "60",
         "image": "https://static.cegal.es/imagenes/marcadas/9788449/978844933899.gif",
         "title": "Deshacer la ansiedad",
         "subtitle": "La nueva ciencia que te ayudar\u00e1 a romper el ciclo de preocupaci\u00f3n y miedo que domina tu mente",
@@ -661,6 +721,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/tu-y-yo-invencibles_978-84-08-25314-3",
+        "rank": "61",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840825314.gif",
         "title": "T\u00fa y yo, invencibles",
         "subtitle": "",
@@ -672,6 +733,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-monje-que-vendio-su-ferrari_978-84-9908-712-2",
+        "rank": "62",
         "image": "https://static.cegal.es/imagenes/marcadas/9788499/978849908712.gif",
         "title": "El monje que vendi\u00f3 su Ferrari",
         "subtitle": "Una f\u00e1bula espiritual",
@@ -683,6 +745,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/no-cosas_978-84-306-2434-8",
+        "rank": "63",
         "image": "https://static.cegal.es/imagenes/marcadas/9788430/978843062434.gif",
         "title": "No-cosas",
         "subtitle": "Quiebras del mundo de hoy",
@@ -694,6 +757,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-caballero-de-la-armadura-oxidada_978-84-9777-230-3",
+        "rank": "64",
         "image": "https://static.cegal.es/imagenes/marcadas/9788497/978849777230.gif",
         "title": "El caballero de la armadura oxidada",
         "subtitle": "",
@@ -705,6 +769,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/los-vencejos_978-84-9066-998-3",
+        "rank": "65",
         "image": "https://static.cegal.es/imagenes/marcadas/9788490/978849066998.gif",
         "title": "Los vencejos",
         "subtitle": "",
@@ -716,6 +781,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/compas-1-los-compas-y-el-diamantito-legendario-nueva-presentacion_978-84-270-4794-5",
+        "rank": "66",
         "image": "https://static.cegal.es/imagenes/marcadas/9788427/978842704794.gif",
         "title": "Compas 1. Los Compas y el diamantito legendario (nueva presentaci\u00f3n)",
         "subtitle": "",
@@ -727,6 +793,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-libro-de-todos-los-amores_978-84-322-3964-9",
+        "rank": "67",
         "image": "https://static.cegal.es/imagenes/marcadas/9788432/978843223964.gif",
         "title": "El libro de todos los amores",
         "subtitle": "",
@@ -738,6 +805,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-novia-gitana-la-novia-gitana-1_978-84-663-4717-4",
+        "rank": "68",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846634717.gif",
         "title": "La novia gitana (La novia gitana 1)",
         "subtitle": "",
@@ -749,6 +817,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/chainsaw-man-1_978-84-679-4115-9",
+        "rank": "69",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846794115.gif",
         "title": "Chainsaw man 1",
         "subtitle": "",
@@ -760,6 +829,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/nadie-nace-en-un-cuerpo-equivocado_978-84-234-3332-2",
+        "rank": "70",
         "image": "https://static.cegal.es/imagenes/marcadas/9788423/978842343332.gif",
         "title": "Nadie nace en un cuerpo equivocado",
         "subtitle": "\u00c9xito y miseria de la identidad de g\u00e9nero",
@@ -771,6 +841,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/si-nos-ensenaran-a-perder-ganariamos-siempre-edicion-limitada-a-precio-especial_978-84-663-5896-5",
+        "rank": "71",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846635896.gif",
         "title": "Si nos ense\u00f1aran a perder, ganar\u00edamos siempre (edici\u00f3n limitada a precio especial)",
         "subtitle": "",
@@ -782,6 +853,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/amanda-black-1-una-herencia-peligrosa_978-84-17921-37-8",
+        "rank": "72",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841792137.gif",
         "title": "Amanda Black 1 - Una herencia peligrosa",
         "subtitle": "",
@@ -793,6 +865,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/sed_978-84-339-8110-3",
+        "rank": "73",
         "image": "https://static.cegal.es/imagenes/marcadas/9788433/978843398110.gif",
         "title": "Sed",
         "subtitle": "",
@@ -804,6 +877,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/culpa-mia-culpables-1_978-84-1314-201-2",
+        "rank": "74",
         "image": "https://static.cegal.es/imagenes/marcadas/9788413/978841314201.gif",
         "title": "Culpa m\u00eda (Culpables 1)",
         "subtitle": "",
@@ -815,6 +889,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/pokemon-super-extra-delux-guia-esencial-definitiva_978-84-18483-10-3",
+        "rank": "75",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841848310.gif",
         "title": "Pok\u00e9mon S\u00faper Extra Delux Gu\u00eda esencial definitiva",
         "subtitle": "",
@@ -826,6 +901,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/guardianes-de-la-noche-2_978-84-679-3512-7",
+        "rank": "76",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846793512.gif",
         "title": "Guardianes de la noche 2",
         "subtitle": "",
@@ -837,6 +913,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-silencio-de-la-ciudad-blanca_978-84-08-22316-0",
+        "rank": "77",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840822316.gif",
         "title": "El silencio de la ciudad blanca",
         "subtitle": "",
@@ -848,6 +925,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/nada_978-84-233-5698-0",
+        "rank": "78",
         "image": "https://static.cegal.es/imagenes/marcadas/9788423/978842335698.gif",
         "title": "Nada",
         "subtitle": "",
@@ -859,6 +937,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-coraje-de-ser-quien-eres-aunque-no-gustes_978-84-08-22369-6",
+        "rank": "79",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840822369.gif",
         "title": "El coraje de ser quien eres (aunque no gustes)",
         "subtitle": "Gu\u00eda para rebeldes que aman su individualidad",
@@ -870,6 +949,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-vida-secreta-de-sarah-brooks_978-84-666-7075-3",
+        "rank": "80",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846667075.gif",
         "title": "La vida secreta de Sarah Brooks",
         "subtitle": "",
@@ -881,6 +961,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/anhelo-serie-crave-1_978-84-08-23299-5",
+        "rank": "81",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840823299.gif",
         "title": "Anhelo (Serie Crave 1)",
         "subtitle": "",
@@ -892,6 +973,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-senora-potter-no-es-exactamente-santa-claus_978-84-397-3807-7",
+        "rank": "82",
         "image": "https://static.cegal.es/imagenes/marcadas/9788439/978843973807.gif",
         "title": "La se\u00f1ora Potter no es exactamente Santa Claus",
         "subtitle": "",
@@ -903,6 +985,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/ay-william_978-84-204-6097-0",
+        "rank": "83",
         "image": "https://static.cegal.es/imagenes/marcadas/9788420/978842046097.gif",
         "title": "Ay, William",
         "subtitle": "",
@@ -914,6 +997,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/asterix-tras-las-huellas-del-grifo_978-84-696-6387-5",
+        "rank": "84",
         "image": "https://static.cegal.es/imagenes/marcadas/9788469/978846966387.gif",
         "title": "Ast\u00e9rix tras las huellas del grifo",
         "subtitle": "",
@@ -925,6 +1009,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/sira_978-84-08-24191-1",
+        "rank": "85",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840824191.gif",
         "title": "Sira",
         "subtitle": "",
@@ -936,6 +1021,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/arena-negra_978-84-18538-29-2",
+        "rank": "86",
         "image": "https://static.cegal.es/imagenes/marcadas/9788418/978841853829.gif",
         "title": "Arena negra",
         "subtitle": "",
@@ -947,6 +1033,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/padre-rico-padre-pobre_978-84-663-3212-5",
+        "rank": "87",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846633212.gif",
         "title": "Padre Rico, padre Pobre",
         "subtitle": "Qu\u00e9 les ense\u00f1an los ricos a sus hijos acerca del dinero, \u00a1que los pobres y la clase media no!",
@@ -958,6 +1045,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/polican-8-atrapa-22_978-84-1392-360-4",
+        "rank": "88",
         "image": "https://static.cegal.es/imagenes/marcadas/9788413/978841392360.gif",
         "title": "Polic\u00e1n 8: Atrapa 22",
         "subtitle": "",
@@ -969,6 +1057,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/planeta-inspectora-camino-vargas-3_978-84-204-6100-7",
+        "rank": "89",
         "image": "https://static.cegal.es/imagenes/marcadas/9788420/978842046100.gif",
         "title": "Planeta (Inspectora Camino Vargas 3)",
         "subtitle": "",
@@ -980,6 +1069,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-rebano_978-84-1384-232-5",
+        "rank": "90",
         "image": "https://static.cegal.es/imagenes/marcadas/9788413/978841384232.gif",
         "title": "El reba\u00f1o",
         "subtitle": "C\u00f3mo Occidente ha sucumbido a la tiran\u00eda ideol\u00f3gica",
@@ -991,6 +1081,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/diferente_978-84-666-7045-6",
+        "rank": "91",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846667045.gif",
         "title": "Diferente",
         "subtitle": "",
@@ -1002,6 +1093,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/estuche-deja-que-ocurra-alice-kellen_978-84-08-23119-6",
+        "rank": "92",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840823119.gif",
         "title": "ESTUCHE DEJA QUE OCURRA (ALICE KELLEN)",
         "subtitle": "",
@@ -1013,6 +1105,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/codigo-penal_978-84-309-8269-1",
+        "rank": "93",
         "image": "https://static.cegal.es/imagenes/marcadas/9788430/978843098269.gif",
         "title": "C\u00f3digo Penal",
         "subtitle": "Ley Org\u00e1nica 10/1995, de 23 de noviembre",
@@ -1024,6 +1117,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/pandemia-y-posverdad_978-84-17796-58-7",
+        "rank": "94",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841779658.gif",
         "title": "Pandemia y posverdad",
         "subtitle": "La vida, la conciencia y la Cuarta Revoluci\u00f3n Industrial",
@@ -1035,6 +1129,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/dime-quien-soy-edicion-limitada-a-un-precio-especial_978-84-663-5724-1",
+        "rank": "95",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846635724.gif",
         "title": "Dime qui\u00e9n soy (edici\u00f3n limitada a un precio especial)",
         "subtitle": "",
@@ -1046,6 +1141,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/anna-kadabra-1-el-club-de-la-luna-llena_978-84-08-22323-8",
+        "rank": "96",
         "image": "https://static.cegal.es/imagenes/marcadas/9788408/978840822323.gif",
         "title": "Anna Kadabra 1. El Club de la Luna Llena",
         "subtitle": "",
@@ -1057,6 +1153,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/chainsaw-man-2_978-84-679-4262-0",
+        "rank": "97",
         "image": "https://static.cegal.es/imagenes/marcadas/9788467/978846794262.gif",
         "title": "Chainsaw Man 2",
         "subtitle": "",
@@ -1068,6 +1165,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/sapiens-de-animales-a-dioses_978-84-9992-622-3",
+        "rank": "98",
         "image": "https://static.cegal.es/imagenes/marcadas/9788499/978849992622.gif",
         "title": "Sapiens. De animales a dioses",
         "subtitle": "Breve historia de la humanidad",
@@ -1079,6 +1177,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/la-red-purpura-la-novia-gitana-2_978-84-663-5093-8",
+        "rank": "99",
         "image": "https://static.cegal.es/imagenes/marcadas/9788466/978846635093.gif",
         "title": "La red p\u00farpura (La novia gitana 2)",
         "subtitle": "",
@@ -1090,6 +1189,7 @@
     },
     {
         "url": "https://www.todostuslibros.com/libros/el-principe-cruel_978-84-17390-61-7",
+        "rank": "100",
         "image": "https://static.cegal.es/imagenes/marcadas/9788417/978841739061.gif",
         "title": "El pr\u00edncipe cruel",
         "subtitle": "",

@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'pelis',
     'contacto',
     'noticias',
+    'libros',
     
 
     'wagtail.contrib.forms',

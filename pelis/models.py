@@ -7,8 +7,6 @@ from wagtail.admin.edit_handlers import FieldPanel
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-from wagtail.snippets.models import register_snippet
-
 # Create your models here.
 
 ## Page que mostrará el index de las películas

@@ -11,7 +11,6 @@ import requests
 from lxml import html
 from urllib.parse import urljoin
 import json
-import csv
 
 headers = {"Accept-Language": "es-es,es;q=0.5"}
 
@@ -57,6 +56,9 @@ def datos_libro(libro):
 
     url = image.xpath(".//a/@href")[0]
     datos['url'] = url
+
+    rank = image.xpath(".//a/span/text()")[0].strip()
+    datos['rank'] = rank
 
     imagen = image.xpath(".//a/img/@src")[0]
     datos['image'] = imagen
