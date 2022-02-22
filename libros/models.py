@@ -44,6 +44,8 @@ class LibrosIndexPage(Page):
         FieldPanel('introduccion', classname="full")
     ]
 
+    parent_page_types = ['wagtailcore.Page']
+    subpage_types = []
 
 
     def paginate(self, request, libros, *args):

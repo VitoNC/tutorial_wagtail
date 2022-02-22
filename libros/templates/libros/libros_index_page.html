@@ -54,7 +54,6 @@
         <thead>
             <tr>
                 <td></td>
-                <td>Título</td>
                 <td>Autor</td>
                 <td>Rank</td>
                 <td>Precio</td>
@@ -66,12 +65,8 @@
             {% for libros in libros %}
             
                 <tr>
-                    <td><img src="{{libros.imagen}}" alt="{{pelis.title}}"></td>
-                    <td>
-                        <div class="title"><a href="{{libros.link}}">
-                                <h3>{{libros.title}}</h3>
-                            </a></div>
-                    </td>
+                    <td><a href="{{libros.link}}"><img src="{{libros.imagen}}" alt="{{pelis.title}}"></a></td>
+
                     <td><div class="autor"><a href="{{libros.urlAuthor}}">{{libros.author}}</a></div></td>
                     <td>
                         <div class="rango">Rank {{libros.rank}}</div>

@@ -33,12 +33,15 @@ class BlogIndexPage(Page):
         
         return context
 
+    parent_page_types = ['wagtailcore.Page']
     subpage_types = ['BlogPage', 'ViajesPage']
 
     
 
 # Tags del Blog
 class BlogTagIndexPage(Page):
+    
+    subpage_types = []
     def get_context(self, request):
 
         # Filter by tag
@@ -56,6 +59,8 @@ class BlogPageTag(TaggedItemBase):
         related_name='tagged_items',
         on_delete=models.CASCADE
     )
+
+
 
 
 

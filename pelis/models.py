@@ -68,6 +68,7 @@ class PelisIndexPage(Page):
         FieldPanel('introduccion', classname="full")
     ]
 
+    parent_page_types = ['wagtailcore.Page']
 
 
     def paginate(self, request, peliculas, *args):
@@ -101,8 +102,11 @@ class PelisIndexPage(Page):
         context['peliculas'] = Pelicula.objects.all().order_by('-rating')
         context['qs'] = qs
 
+
         
         return context
+
+
     
     
 

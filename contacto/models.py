@@ -12,3 +12,7 @@ class Contacto(Page):
     content_panels = Page.content_panels + [
         FieldPanel('descripcion'),
     ]
+
+    parent_page_types = ['wagtailcore.Page']
+    subpage_types = []
+
