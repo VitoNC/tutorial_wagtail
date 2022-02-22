@@ -2,11 +2,43 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-blogindexpage{% endblock %}
+{% block body_class %}template-librosindexpage{% endblock %}
 
 
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<style>
+
+    .precio {
+        font-weight: bold;
+        font-size: larger;
+        background-color: goldenrod;
+        text-align: center;
+        border: solid;
+    }
+
+    .rango {
+        font-weight: bold;
+        font-size: larger;
+        background-color: gold;
+        text-align: center;
+        border: solid;
+    }
+
+    .autor {
+        font-weight: bold;
+        font-size: larger;
+        background-color: gold;
+        text-align: center;
+        border: solid;
+    }
+
+
+
+    a {
+        text-decoration: none;
+    }
+</style>
 
 {% endblock %}
 
@@ -21,28 +53,39 @@
     <table id="libros">
         <thead>
             <tr>
+                <td></td>
                 <td>Título</td>
                 <td>Autor</td>
-                <td>Posición</td>
-                <td>Género</td>
-                <td></td>
+                <td>Rank</td>
+                <td>Precio</td>
             </tr>
         </thead>
         <tbody>
 
 
             {% for libros in libros %}
-            <tr>
-                <td><a href="{{libros.link}}"><h3>{{libros.title}}</h3></a></td>
-                <td><a href="{{libros.urlAuthor}}">{{libros.author}}</a></td>
-                <td><p>Rango {{libros.rank}}</p></td>
-                <td>{{libros.generos_str}}</td>
-                <td><img src="{{libros.imagen}}" alt="{{pelis.title}}"></td>
-            </tr>
-
+            
+                <tr>
+                    <td><img src="{{libros.imagen}}" alt="{{pelis.title}}"></td>
+                    <td>
+                        <div class="title"><a href="{{libros.link}}">
+                                <h3>{{libros.title}}</h3>
+                            </a></div>
+                    </td>
+                    <td><div class="autor"><a href="{{libros.urlAuthor}}">{{libros.author}}</a></div></td>
+                    <td>
+                        <div class="rango">Rank {{libros.rank}}</div>
+                    </td>
+                    <td>
+                        <div class="precio">{{libros.price}}</div>
+                    </td>
+                </tr>
+            
 
             {% endfor %}
+
         </tbody>
+
     </table>
 </div>
 
@@ -55,6 +98,7 @@
 <script type="text/javascript" src="/i18n/es_es.json"></script>
 
 <script>
+    
     $(document).ready(function () {
         $('#libros').DataTable({
             language: {
