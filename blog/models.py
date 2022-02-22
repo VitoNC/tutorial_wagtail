@@ -12,8 +12,8 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.snippets.models import register_snippet
 
 
-
 from wagtail.search import index
+
 
 class BlogIndexPage(Page):
     introduccion = RichTextField(blank=True)
@@ -28,8 +28,16 @@ class BlogIndexPage(Page):
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
         
+        viajes = self.get_children().live().order_by('-first_published_at')
+        context['viajes'] = viajes
+        
         return context
 
+    subpage_types = ['BlogPage', 'ViajesPage']
+
+    
+
+# Tags del Blog
 class BlogTagIndexPage(Page):
     def get_context(self, request):
 
@@ -50,6 +58,9 @@ class BlogPageTag(TaggedItemBase):
     )
 
 
+
+
+# Modelo Página Blog
 class BlogPage(Page):
     date = models.DateField("Fecha Post")
     intro = models.CharField("Introducción", max_length=250)
@@ -77,6 +88,25 @@ class BlogPage(Page):
             label="Galería de imágenes"),
     ]
 
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+# Modelo Página Viajes
+class ViajesPage(Page):
+    lugar = models.CharField(max_length=40, blank=True)
+    fecha = models.DateField("Fecha del Viaje")
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('lugar'),
+        FieldPanel('fecha'),
+        FieldPanel('body')
+    ]
+
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+
 class BlogPageGalleryImage(Orderable):
     page = ParentalKey(BlogPage, 
         on_delete=models.CASCADE, 
@@ -90,6 +120,10 @@ class BlogPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
+
+
+
+
 
 @register_snippet
 class BlogCategory(models.Model):
@@ -110,3 +144,6 @@ class BlogCategory(models.Model):
     class Meta:
         verbose_name_plural = 'categorías de blog'
         verbose_name = 'categoría de blog'
+
+
+

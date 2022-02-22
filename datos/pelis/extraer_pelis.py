@@ -50,6 +50,9 @@ def datos_peli(peli):
     titulo = elementos[1]
     rating = elementos[2]
 
+
+
+
     #imagen
     imagensrc = imagen.xpath(".//img/@src")[0]
     datos['img'] = imagensrc
@@ -57,6 +60,8 @@ def datos_peli(peli):
     # url de la peli
     url = titulo.xpath(".//a/@href")[0]
     datos['url'] = url
+
+
 
     # cast
     cast = titulo.xpath(".//a/@title")[0]
@@ -97,3 +102,26 @@ if __name__ == '__main__':
 
     datos = [datos_peli(p) for p in peliculas]
     json.dump(datos, open('datos_pelis_plus.json', 'w'))
+
+
+
+# Automatizar Autenticación en sitios Web
+
+
+# sesion = requests.session()
+
+#urllogin = 'http://localhost:8000/admin/login/'
+
+#datos = {}
+#datos['username'] = 'usuario'
+#datos['password'] = 'contraseña'
+
+
+#respuesta = sesion.get(url)
+
+#doc = html.fromstring(respuesta.content)
+
+#datos['csrfmiddlewaretoken'] = doc.xpath("//input[@name='csrfmiddlewaretoken']/value")
+
+#resp = sesion.post(urllogin, data = datos)
+
