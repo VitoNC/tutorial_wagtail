@@ -28,7 +28,6 @@ class Genre(models.Model):
 
 
 ## Modelo para películas
-
 class Pelicula(models.Model):
     title = models.CharField('título', max_length=250)
     slug = models.SlugField(blank=True)

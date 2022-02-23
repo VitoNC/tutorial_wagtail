@@ -71,3 +71,29 @@ class NoticiasPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
+
+
+## Modelo para noticias
+@register_snippet
+class Noticia(models.Model):
+    title = models.CharField('título', max_length=250)
+    subtitle = models.CharField(blank=True, max_length=250)
+    date = models.DateField()
+    body = RichTextField(blank=True)
+    imagen = models.URLField()
+
+
+    panels = [
+        FieldPanel('title'),
+        FieldPanel('subtitle'),
+        FieldPanel('date'),
+        FieldPanel('body'),
+        FieldPanel('imagen'),
+    ]
+
+    def __str__(self):
+        return f'{self.title}'
+
+    class Meta:
+        verbose_name_plural = 'noticias'
+        verbose_name = 'noticia'
