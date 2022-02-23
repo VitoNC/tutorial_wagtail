@@ -1,4 +1,6 @@
 from blog.models import BlogCategory as Category
+from noticias.models import Noticia
+
 from django.template import Library, loader
 
 register = Library()
@@ -11,4 +13,13 @@ def categories_list(context):
     return {
         'request': context['request'],
         'categories': categories
+    }
+
+@register.inclusion_tag('components/noticias_list.html',
+                        takes_context=True)
+def noticias_list(context):
+    noticias = Noticia.objects.all()
+    return {
+        'request': context['request'],
+        'noticias': noticias
     }
