@@ -1,110 +1,94 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags static %}
 
 {% block body_class %}template-librosindexpage{% endblock %}
 
 
-{% block extra_css %}
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-<style>
-
-    .precio {
-        font-weight: bold;
-        font-size: larger;
-        background-color: goldenrod;
-        text-align: center;
-        border: solid;
-    }
-
-    .rango {
-        font-weight: bold;
-        font-size: larger;
-        background-color: gold;
-        text-align: center;
-        border: solid;
-    }
-
-    .autor {
-        font-weight: bold;
-        font-size: larger;
-        background-color: gold;
-        text-align: center;
-        border: solid;
-    }
-
-
-
-    a {
-        text-decoration: none;
-    }
-</style>
-
-{% endblock %}
-
-
 {% block content %}
 <div class="container">
-    <h1>{{ page.title }}</h1><br>
+    <div class="row justify-content-center bestsellers">
+        <div class="col">
 
-    <p>Listado de los 100 libros mas vendidos:</p>
-    <hr>
+            <h1 class="page-title">{{ page.title }}</h1><br>
 
-    <table id="libros">
-        <thead>
-            <tr>
-                <td></td>
-                <td>Título</td>
-                <td>Autor</td>
-                <td>Rank</td>
-                <td>Precio</td>
-            </tr>
-        </thead>
-        <tbody>
-
-
+            <p>Listado de los 100 libros mas vendidos:</p>
+            <hr>
             {% for libros in libros %}
-            
-                <tr>
-                    <td><img src="{{libros.imagen}}" alt="{{pelis.title}}"></td>
-                    <td>
-                        <div class="title"><a href="{{libros.link}}">
-                                <h3>{{libros.title}}</h3>
-                            </a></div>
-                    </td>
-                    <td><div class="autor"><a href="{{libros.urlAuthor}}">{{libros.author}}</a></div></td>
-                    <td>
-                        <div class="rango">Rank {{libros.rank}}</div>
-                    </td>
-                    <td>
-                        <div class="precio">{{libros.price}}</div>
-                    </td>
-                </tr>
-            
-
+            <ul class="books">
+                <li class="book row" style="list-style: none;">
+                    <div class="col-12 col-md-9 book-content">
+                        <div class="row">
+                            <div class="book-image col-3 col-sm-3 col-md-2">
+                                <a href="{{libros.link}}">
+                                    <img src="{{libros.imagen}}" width="100" height="150">
+                                    <span>{{libros.rank}}</span>
+                                </a>
+                            </div>
+                            <div class="book-details col-9 col-sm-9 col-md-10">
+                                <h2 class="title">
+                                    <a href="{{libros.link}}">{{libros.title}}</a>
+                                </h2>
+                                <h3 class="subtitle">
+                                    {{libros.subtitle}}
+                                </h3>
+                                <h3 class="author">
+                                    <a href="{{libros.urlAuthor}}">{{libros.author}}</a>
+                                </h3>
+                                <p class="synopsis d-block">
+                                    {{libros.synopsis}}
+                                </p>
+                                <p class="data">
+                                    {{libros.data}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 book-action" data-gtm-vis-first-on-screen-30715057_41="342" data-gtm-vis-recent-on-screen-30715057_41="1764558" data-gtm-vis-total-visible-time-30715057_41="1000" data-gtm-vis-has-fired-30715057_41="1">
+                        <div class="d-flex card-block">
+                            <div class="book-price">
+                                <strong>{{libros.price}}</strong>
+                                "({{libros.price}} sin IVA)"
+                            </div>
+                            <div class="book-location">
+                                <a class="btn btn-primary btn-where" href="{{libros.link}}">Dónde encontrarlo</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
             {% endfor %}
 
-        </tbody>
-
-    </table>
+        </div>
+    </div>
 </div>
 
+{% if libros.paginator.count > 1 %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% include "includes/pagination.html" with subpages=libros %}
+        </div>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}
+
+
+{% block extra_css %}
+<!--FONTS-->
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<!--STYLES-->
+<link rel="stylesheet" href="../../../blogclase/static/css/app.css" >
+<link rel="stylesheet" href="../../../blogclase/static/css/front.css" >
+<link rel="stylesheet" href="https://www.todostuslibros.com/css/fontawesome-5.12.0/css/all.min.css">
+{% endblock %}
+
 
 {% block extra_js %}
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="/i18n/es_es.json"></script>
-
-<script>
-    
-    $(document).ready(function () {
-        $('#libros').DataTable({
-            language: {
-                url: '//cdn.datatables.net/plug-ins/1.11.4/i18n/es_es.json'
-            }
-        });
-    });
-</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
 {% endblock %}
+
