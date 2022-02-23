@@ -40,6 +40,7 @@ for l1 in libros:
     l.urlAuthor = l1["urlAuthor"]
     l.link = l1["url"]
     l.rank = l1["rank"]
+    l.synopsis = l1["synopsis"]
 
     l.imagen = l1["image"]
 

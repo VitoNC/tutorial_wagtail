@@ -67,8 +67,6 @@ class PelisIndexPage(Page):
         FieldPanel('introduccion', classname="full")
     ]
 
-
-
     def paginate(self, request, peliculas, *args):
         page = request.GET.get('page')
 
