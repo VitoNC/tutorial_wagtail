@@ -9,7 +9,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your models here.
 
 
-## Modelo para películas
+## Modelo para libros
 
 class Libro(models.Model):
     title = models.CharField('título', max_length=250)
@@ -34,11 +34,11 @@ class Libro(models.Model):
         FieldPanel('price'),
     ]
 
-
     def __str__(self):
         return f'{self.title} ({self.price})'
 
 
+# Modelo de página de libros
 class LibrosIndexPage(Page):
     introduccion = RichTextField(blank=True)
 
@@ -65,7 +65,7 @@ class LibrosIndexPage(Page):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
 
-        libros = self.paginate(request, Libro.objects.all().order_by('-rank'))
+        libros = self.paginate(request, Libro.objects.all().order_by('rank'))
 
         context['libros'] = libros
 

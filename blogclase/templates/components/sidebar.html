@@ -1,12 +1,11 @@
 {% load wagtailcore_tags blog_tags %}
 <div class="col-md-4">
 
-  {% if page.tags.all.count %}
+  {% if page.categories.all.count %}
   {% categories_list %}
   {% endif %}
 
   {% noticias_list %}
-
 
 
 </div>

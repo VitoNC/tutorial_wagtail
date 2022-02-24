@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags blog_tags %}
 
 {% block body_class %}template-blogindexpage{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>{{ page.title }}</h1>
 
-    <div class="intro">{{ page.introduccion|richtext }}</div>
+<div class="container">
+    <h1 class="page-title">{{ page.title }}</h1>
+
+    <div class="page-title" s>{{ page.introduccion|richtext }}</div>
 
     {% for post in blogpages %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.intro }}
+        <hr>
+
         {% comment %}
         Quito el body para que no salga
         en índice
@@ -21,4 +24,7 @@
     <p>No hay posts todavía ... </p>
     {% endfor %}
 </div>
+
+{% categories_list %}
+
 {% endblock %}

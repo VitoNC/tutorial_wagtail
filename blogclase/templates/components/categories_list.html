@@ -1,5 +1,5 @@
 <div class="card my-4">
-    <h5 class="card-header">Categorías</h5>
+    <h5 class="card-header">Categorías del Blog</h5>
     <div class="card-body">
       <div class="row">
         <div class="col-lg-12">
@@ -7,6 +7,7 @@
             {% for category in categories %}
               <li>
                 <a href="#"> 
+                  <img src="{{ category.icon }}">
                   {{ category.name }}
                 </a>
               </li>

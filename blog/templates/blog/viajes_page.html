@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags blog_tags %}
 
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
 <div class="container">
-    <h1>{{ page.title }}</h1>
+    <h1>Viaje a {{ page.title }}</h1>
     <p class="meta">{{ page.date }}</p>
 
     <!-- Categorías-->
@@ -16,7 +16,7 @@
     <ul>
         {% for category in categories %}
         <li style="display: inline">
-            {% image category.icon fill-32x32 style="vertical-align: middle" %}
+            {% image category.icon fill-48x48 style="vertical-align: middle" %}
             {{ category.name }}
         </li>
         {% endfor %}
@@ -28,17 +28,46 @@
 
     {{ page.body|richtext }}
 
-    <div class="row">
-        {% for item in page.gallery_images.all %}
-        <div class="col-md-3">
-            {% image item.image fill-320x240 %}
-            <p>{{ item.caption }}</p>
-        </div>
-        {% endfor %}
+    <div id="map" style="height: 250px;">
     </div>
 
     <p><a href="{{ page.get_parent.url }}">Volver al blog</a></p>
 </div>
 
+{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+{% endblock %}
+
+{% block extra_js %}
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'your.mapbox.access.token'
+    }).addTo(map);
+
+    var marker = L.marker([51.5, -0.09]).addTo(map);
+
+    var circle = L.circle([51.508, -0.11], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(map);
+
+</script>
 {% endblock %}

@@ -97,20 +97,37 @@ class BlogPage(Page):
     parent_page_types = ['blog.BlogIndexPage']
     subpage_types = []
 
+
 # Modelo Página Viajes
 class ViajesPage(Page):
-    lugar = models.CharField(max_length=40, blank=True)
-    fecha = models.DateField("Fecha del Viaje")
+    lugar = models.CharField(max_length=30)
+    date = models.DateField("Fecha Viaje", blank=True, null=True)
+    intro = models.CharField("Introducción", max_length=250, blank=True, null=True)
     body = RichTextField(blank=True)
+    categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+
+    search_fields = Page.search_fields + [
+        index.SearchField('intro'),
+        index.SearchField('body'),
+    ]
 
     content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel('date'),
+            FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+            ],
+            heading='Información'
+        ),
         FieldPanel('lugar'),
-        FieldPanel('fecha'),
-        FieldPanel('body')
+        FieldPanel('intro'),
+        FieldPanel('body', classname="full"),
+
     ]
 
     parent_page_types = ['blog.BlogIndexPage']
     subpage_types = []
+
 
 
 class BlogPageGalleryImage(Orderable):

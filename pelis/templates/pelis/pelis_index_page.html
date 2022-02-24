@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>{{ page.title }}</h1><br>
+    <h1 class="page-title">{{ page.title }}</h1><br>
 
     <p>Listado de las mejores 250 películas según IMDB:</p>
     <hr>
@@ -24,39 +24,24 @@
                 <td>Título</td>
                 <td>Año</td>
                 <td>Posición</td>
-                <td>Género</td>
                 <td></td>
             </tr>
         </thead>
         <tbody>
-
 
             {% for pelis in peliculas %}
             <tr>
                 <td>{{pelis.title}}</td>
                 <td>{{pelis.year}}</td>
                 <td>{{pelis.place}}</td>
-                <td>{{pelis.generos_str}}</td>
                 <td><img src="{{pelis.imagen}}" alt="{{pelis.title}}"></td>
             </tr>
-
 
             {% endfor %}
         </tbody>
     </table>
 </div>
 
-
-
-{% if peliculas.paginator.count > 1 %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {% include "includes/pagination.html" with subpages=peliculas %}
-        </div>
-    </div>
-</div>
-{% endif %}
 {% endblock %}
 
 {% block extra_js %}
