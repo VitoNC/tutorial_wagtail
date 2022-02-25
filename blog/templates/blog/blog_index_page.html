@@ -15,13 +15,8 @@
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.intro }}
         <hr>
+        <p><a href="?categoria=Viajes">Viajes</a></p>
 
-        {% comment %}
-        Quito el body para que no salga
-        en índice
-        {% endcomment %}
-    {% empty %}
-    <p>No hay posts todavía ... </p>
     {% endfor %}
 </div>
 

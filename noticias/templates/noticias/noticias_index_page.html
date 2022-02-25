@@ -12,11 +12,12 @@
     <h3 class="page-title" s>{{ page.introduccion|richtext }}</h3>
 
     {% for noticia in noticias %}
-        <h2><a href="detalle/{{noticia.id}}">{{ noticia.title }}</a></h2>
+    <a href="detalle/{{noticia.id}}">
+        <h2>{{ noticia.title }}</h2>
         {{ noticia.subtitle }}<br>
-        <img src="{{ noticia.imagen }}" width="70%">
-
-        <hr>
+        <img src="{{ noticia.imagen }}" width="100%">
+    </a>
+    <hr>
 
     {% endfor %}
 </div>

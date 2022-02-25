@@ -3,6 +3,8 @@ from unicodedata import category
 from django.db import models
 from django import forms
 
+from pelis.models import Pelicula
+
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
@@ -28,18 +30,21 @@ class BlogIndexPage(Page):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
 
-        viajes = request.GET.get('viajes')
-        qs = ''
+        posts = request.GET.get('Posts')
+        viajes = request.GET.get('Viajes')
+        pelis = request.GET.get('Peliculas')
 
         if viajes:
-            entradas = self.subpage_types[ViajesPage]
-            qs = f'categoria={viajes}'
+            entradas = ViajesPage
+        elif pelis:
+            entradas = Pelicula.objects.all().order_by('-rank')
+        elif posts:
+            entradas = BlogPage
         else:
             entradas = BlogIndexPage.objects.all()
 
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
-        context['qs'] = qs
 
         return context
 
