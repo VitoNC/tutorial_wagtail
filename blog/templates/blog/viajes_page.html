@@ -2,7 +2,7 @@
 
 {% load wagtailcore_tags wagtailimages_tags blog_tags %}
 
-{% block body_class %}template-blogpage{% endblock %}
+{% block body_class %}template-viajespage{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -28,10 +28,10 @@
 
     {{ page.body|richtext }}
 
-    <div id="map" style="height: 250px;">
-    </div>
+    <div id="map" style="height: 250px;"></div>
 
-    <p><a href="{{ page.get_parent.url }}">Volver al blog</a></p>
+
+    <p><a href="{{ page.get_parent.url }}">...Volver al blog</a></p>
 </div>
 
 {% endblock %}

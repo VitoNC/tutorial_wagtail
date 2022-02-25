@@ -18,8 +18,9 @@ def categories_list(context):
 @register.inclusion_tag('components/noticias_list.html',
                         takes_context=True)
 def noticias_list(context):
-    noticias = Noticia.objects.all()
+    noticias = Noticia.objects.all().order_by('-id')[:5]
+
     return {
         'request': context['request'],
-        'noticias': noticias
+        'noticias': noticias,
     }

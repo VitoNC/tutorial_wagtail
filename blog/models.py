@@ -1,3 +1,5 @@
+from sre_constants import CATEGORY
+from unicodedata import category
 from django.db import models
 from django import forms
 
@@ -25,18 +27,26 @@ class BlogIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
+
+        viajes = request.GET.get('viajes')
+        qs = ''
+
+        if viajes:
+            entradas = self.subpage_types[ViajesPage]
+            qs = f'categoria={viajes}'
+        else:
+            entradas = BlogIndexPage.objects.all()
+
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
-        
-        viajes = self.get_children().live().order_by('-first_published_at')
-        context['viajes'] = viajes
-        
+        context['qs'] = qs
+
         return context
 
     parent_page_types = ['wagtailcore.Page']
     subpage_types = ['BlogPage', 'ViajesPage']
 
-    
+
 
 # Tags del Blog
 class BlogTagIndexPage(Page):
@@ -53,6 +63,7 @@ class BlogTagIndexPage(Page):
         context = super().get_context(request)
         context['blogpages'] = blogpages
         return context
+
 
 class BlogPageTag(TaggedItemBase):
     content_object = ParentalKey(
@@ -127,6 +138,8 @@ class ViajesPage(Page):
 
     parent_page_types = ['blog.BlogIndexPage']
     subpage_types = []
+
+    
 
 
 

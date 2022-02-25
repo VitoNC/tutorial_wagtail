@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-noticiasindexpage{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="page-title">{{ page.title }}</h1>
+
+    <h3 class="page-title" s>{{ page.introduccion|richtext }}</h3>
+
+    {% for noticia in noticias %}
+        <h2><a href="detalle/{{noticia.id}}">{{ noticia.title }}</a></h2>
+        {{ noticia.subtitle }}<br>
+        <img src="{{ noticia.imagen }}" width="70%">
+
+        <hr>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
