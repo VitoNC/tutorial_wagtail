@@ -1,5 +1,3 @@
-from sre_constants import CATEGORY
-from unicodedata import category
 from django.db import models
 from django import forms
 
@@ -30,26 +28,27 @@ class BlogIndexPage(Page):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
 
-        posts = request.GET.get('Posts')
-        viajes = request.GET.get('Viajes')
-        pelis = request.GET.get('Peliculas')
+        categoria = request.GET.get('categoria')
+        
+        qs = ''
 
-        if viajes:
-            entradas = ViajesPage
-        elif pelis:
-            entradas = Pelicula.objects.all().order_by('-rank')
-        elif posts:
-            entradas = BlogPage
+        if categoria == 'viajes':
+            entradas = ViajesPage.objects.live().order_by('-first_published_at')
+        elif categoria == 'musica':
+            entradas = MusicaPage.objects.live().order_by('-first_published_at')
+        elif categoria == 'peliculas':
+            entradas = MusicaPage.objects.live().order_by('-first_published_at')
+        elif categoria == 'posts':
+            entradas = BlogPage.objects.live().order_by('-first_published_at')
         else:
-            entradas = BlogIndexPage.objects.all()
+            entradas = self.get_children().live().order_by('-first_published_at')
 
-        blogpages = self.get_children().live().order_by('-first_published_at')
-        context['blogpages'] = blogpages
+        context['blogpages'] = entradas
 
         return context
 
     parent_page_types = ['wagtailcore.Page']
-    subpage_types = ['BlogPage', 'ViajesPage']
+    subpage_types = ['BlogPage', 'ViajesPage', 'MusicaPage']
 
 
 
@@ -120,7 +119,9 @@ class ViajesPage(Page):
     date = models.DateField("Fecha Viaje", blank=True, null=True)
     intro = models.CharField("Introducción", max_length=250, blank=True, null=True)
     body = RichTextField(blank=True)
+    coord = models.CharField(blank=True, max_length=20)
     categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+    imagen = models.URLField(blank=True)
 
 
     search_fields = Page.search_fields + [
@@ -136,7 +137,40 @@ class ViajesPage(Page):
             heading='Información'
         ),
         FieldPanel('lugar'),
+        FieldPanel('coord'),
         FieldPanel('intro'),
+        FieldPanel('imagen'),
+        FieldPanel('body', classname="full"),
+
+    ]
+
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+
+# Modelo Página Musica
+class MusicaPage(Page):
+    lugar = models.CharField(max_length=30)
+    intro = models.CharField("Introducción", max_length=250, blank=True, null=True)
+    body = RichTextField(blank=True)
+    imagen = models.URLField(blank=True)
+
+    categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+    search_fields = Page.search_fields + [
+        index.SearchField('intro'),
+        index.SearchField('body'),
+    ]
+
+    content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+            ],
+            heading='Información'
+        ),
+        FieldPanel('lugar'),
+        FieldPanel('intro'),
+        FieldPanel('imagen'),
         FieldPanel('body', classname="full"),
 
     ]
