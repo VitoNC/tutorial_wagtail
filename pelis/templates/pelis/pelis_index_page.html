@@ -2,37 +2,60 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-blogindexpage{% endblock %}
+{% block body_class %}template-pelisindexpage{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+
+{% endblock %}
+
 
 {% block content %}
 <div class="container">
-    <h1>{{ page.title }}</h1><br>
+    <h1 class="page-title">{{ page.title }}</h1><br>
 
     <p>Listado de las mejores 250 películas según IMDB:</p>
     <hr>
-    <p><a href="?decada=90">Listado Decada de los 90</a></p>
-    <hr>
 
+    <table id="peliculas">
+        <thead>
+            <tr>
+                <td>Título</td>
+                <td>Año</td>
+                <td>Posición</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
 
+            {% for pelis in peliculas %}
+            <tr>
+                <td>{{pelis.title}}</td>
+                <td>{{pelis.year}}</td>
+                <td>{{pelis.place}}</td>
+                <td><img src="{{pelis.imagen}}" alt="{{pelis.title}}"></td>
+            </tr>
 
-    {% for pelis in peliculas %}
-    <ol>
-        <li style="list-style: none;">{{ pelis.place }}. <a href="{{ pelis.link }}">{{ pelis.title }}</a> ({{ pelis.year }})<br><img src="{{ pelis.imagen }}"> &#9733; {{ pelis.rating }}<br>Reparto: {{ pelis.cast }}</li>
-        <hr>
-    </ol>
-
-    {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
+{% endblock %}
 
+{% block extra_js %}
+<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/i18n/es_es.json"></script>
 
-{% if peliculas.paginator.count > 1 %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {% include "includes/pagination.html" with subpages=peliculas %}
-        </div>
-    </div>
-</div>
-{% endif %}
+<script>
+    $(document).ready(function () {
+        $('#peliculas').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.11.4/i18n/es_es.json'
+            }
+        });
+    });
+</script>
 {% endblock %}

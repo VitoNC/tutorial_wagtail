@@ -7,8 +7,6 @@ from wagtail.admin.edit_handlers import FieldPanel
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-from wagtail.snippets.models import register_snippet
-
 # Create your models here.
 
 ## Page que mostrará el index de las películas
@@ -30,7 +28,6 @@ class Genre(models.Model):
 
 
 ## Modelo para películas
-
 class Pelicula(models.Model):
     title = models.CharField('título', max_length=250)
     slug = models.SlugField(blank=True)
@@ -53,6 +50,10 @@ class Pelicula(models.Model):
         FieldPanel('cast'),
         FieldPanel('generos')
     ]
+
+    def generos_str(self):
+        return ', '.join([g.nombre for g in self.generos.all()])
+
     def __str__(self):
         return f'{self.title} ({self.year})'
 
@@ -65,8 +66,6 @@ class PelisIndexPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('introduccion', classname="full")
     ]
-
-
 
     def paginate(self, request, peliculas, *args):
         page = request.GET.get('page')
@@ -96,7 +95,7 @@ class PelisIndexPage(Page):
             peliculas = Pelicula.objects.all()
             
 
-        context['peliculas'] = self.paginate(request, peliculas)
+        context['peliculas'] = Pelicula.objects.all().order_by('-rating')
         context['qs'] = qs
 
         

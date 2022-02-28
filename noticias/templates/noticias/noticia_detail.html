@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-noticiaspage{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ object.title }}</h1>
+    <p class="meta">{{ object.date }}</p>
+    <img src="{{ object.imagen }}" width="auto" height="auto">
+
+
+
+    <div class="intro">{{ object.intro }}</div>
+
+    {{ object.body | richtext }}
+
+</div>
+
+{% endblock %}

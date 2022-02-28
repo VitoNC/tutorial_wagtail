@@ -1,0 +1,25 @@
+<div class="card my-4">
+    <h5 class="card-header">Noticias</h5>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-unstyled mb-0">
+            {% for noticia in noticias %}
+              <li>
+                <a href="/noticias/detalle/{{noticia.id}}"> 
+                  {{ noticia.title }}
+                </a>
+                <p style="font-size: 75%;">
+                  {{ noticia.subtitle }}
+                </p>
+              </li>
+              <hr>
+            {% empty %}
+              'No hay noticias'
+            {% endfor %}
+          </ul>
+          <a href="/noticias">Mostrar más...</a>
+        </div>
+      </div>
+    </div>
+  </div>

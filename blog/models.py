@@ -1,5 +1,9 @@
+from sre_constants import CATEGORY
+from unicodedata import category
 from django.db import models
 from django import forms
+
+from pelis.models import Pelicula
 
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
@@ -12,8 +16,8 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.snippets.models import register_snippet
 
 
-
 from wagtail.search import index
+
 
 class BlogIndexPage(Page):
     introduccion = RichTextField(blank=True)
@@ -25,12 +29,35 @@ class BlogIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
+
+        posts = request.GET.get('Posts')
+        viajes = request.GET.get('Viajes')
+        pelis = request.GET.get('Peliculas')
+
+        if viajes:
+            entradas = ViajesPage
+        elif pelis:
+            entradas = Pelicula.objects.all().order_by('-rank')
+        elif posts:
+            entradas = BlogPage
+        else:
+            entradas = BlogIndexPage.objects.all()
+
         blogpages = self.get_children().live().order_by('-first_published_at')
         context['blogpages'] = blogpages
-        
+
         return context
 
+    parent_page_types = ['wagtailcore.Page']
+    subpage_types = ['BlogPage', 'ViajesPage']
+
+
+
+# Tags del Blog
 class BlogTagIndexPage(Page):
+    
+    subpage_types = []
+    
     def get_context(self, request):
 
         # Filter by tag
@@ -42,6 +69,7 @@ class BlogTagIndexPage(Page):
         context['blogpages'] = blogpages
         return context
 
+
 class BlogPageTag(TaggedItemBase):
     content_object = ParentalKey(
         'BlogPage',
@@ -50,6 +78,11 @@ class BlogPageTag(TaggedItemBase):
     )
 
 
+
+
+
+
+# Modelo Página Blog
 class BlogPage(Page):
     date = models.DateField("Fecha Post")
     intro = models.CharField("Introducción", max_length=250)
@@ -77,6 +110,44 @@ class BlogPage(Page):
             label="Galería de imágenes"),
     ]
 
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+
+# Modelo Página Viajes
+class ViajesPage(Page):
+    lugar = models.CharField(max_length=30)
+    date = models.DateField("Fecha Viaje", blank=True, null=True)
+    intro = models.CharField("Introducción", max_length=250, blank=True, null=True)
+    body = RichTextField(blank=True)
+    categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+
+    search_fields = Page.search_fields + [
+        index.SearchField('intro'),
+        index.SearchField('body'),
+    ]
+
+    content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel('date'),
+            FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+            ],
+            heading='Información'
+        ),
+        FieldPanel('lugar'),
+        FieldPanel('intro'),
+        FieldPanel('body', classname="full"),
+
+    ]
+
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+    
+
+
+
 class BlogPageGalleryImage(Orderable):
     page = ParentalKey(BlogPage, 
         on_delete=models.CASCADE, 
@@ -90,6 +161,10 @@ class BlogPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
+
+
+
+
 
 @register_snippet
 class BlogCategory(models.Model):
@@ -110,3 +185,6 @@ class BlogCategory(models.Model):
     class Meta:
         verbose_name_plural = 'categorías de blog'
         verbose_name = 'categoría de blog'
+
+
+

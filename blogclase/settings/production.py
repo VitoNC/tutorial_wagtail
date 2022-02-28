@@ -3,9 +3,20 @@ from .base import *
 DEBUG = False
 
 # Arreglar luego
-SECRET_KEY = 'django-insecure-ljokrzvvwsydc&2d+_d6wd+t#eo2+t*ie3!cnt4ksdw!me9*%i'
 
-ALLOWED_HOSTS = ['*'] 
+
+ALLOWED_HOSTS = ['*','192.168.1.78'] 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mibasededatos',
+        'USER': 'victor',
+        'PASSWORD': 'calimocho',
+        'HOST': 'localhost','192.168.1.78'
+        'PORT': '',
+    }
+}
 
 
 try:

@@ -1,0 +1,21 @@
+{% if page.tags.all.count %}
+
+<div class="card my-4">
+  <h5 class="card-header">Tags</h5>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="list-unstyled mb-0">
+          {% for tag in page.tags.all %}
+            <li>
+              <a href="{% slugurl 'tags' %}?tag={{ tag }}"><button type="button">{{ tag }}</button></a>
+            </li>
+          {% empty %}
+            'No tags yet'
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

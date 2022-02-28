@@ -1,0 +1,15 @@
+{% load wagtailcore_tags blog_tags %}
+<div class="col-md-4">
+
+  {% if page.categories.all.count %}
+    {% categories_list %}
+  {% endif %}
+
+
+  {% if page.noticias.all.count %}
+  {% else %}
+  {% noticias_list %}
+  {% endif %}
+
+
+</div>
