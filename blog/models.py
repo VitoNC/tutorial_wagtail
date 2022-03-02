@@ -30,14 +30,12 @@ class BlogIndexPage(Page):
 
         categoria = request.GET.get('categoria')
         
-        qs = ''
-
         if categoria == 'viajes':
             entradas = ViajesPage.objects.live().order_by('-first_published_at')
         elif categoria == 'musica':
             entradas = MusicaPage.objects.live().order_by('-first_published_at')
         elif categoria == 'peliculas':
-            entradas = MusicaPage.objects.live().order_by('-first_published_at')
+            entradas = PeliPage.objects.live().order_by('-first_published_at')
         elif categoria == 'posts':
             entradas = BlogPage.objects.live().order_by('-first_published_at')
         else:
@@ -48,7 +46,7 @@ class BlogIndexPage(Page):
         return context
 
     parent_page_types = ['wagtailcore.Page']
-    subpage_types = ['BlogPage', 'ViajesPage', 'MusicaPage']
+    subpage_types = ['BlogPage', 'ViajesPage', 'MusicaPage', 'PeliPage']
 
 
 
@@ -178,8 +176,33 @@ class MusicaPage(Page):
     parent_page_types = ['blog.BlogIndexPage']
     subpage_types = []
 
-    
+# Modelo Página Pelicula
+class PeliPage(Page):
+    for p in Pelicula.objects.all():
+        if Page.title == Pelicula(p).title:
 
+            intro = Pelicula
+            rating = Pelicula.objects.all()
+
+            year = Pelicula(p).year
+            imagen = Pelicula(p).imagen
+            cast = Pelicula(p).cast
+
+    categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+    content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+            ],
+            heading='Información'
+            
+        ),
+    ]
+
+    parent_page_types = ['blog.BlogIndexPage']
+    subpage_types = []
+
+    
 
 
 class BlogPageGalleryImage(Orderable):

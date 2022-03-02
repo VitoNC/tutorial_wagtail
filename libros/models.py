@@ -70,3 +70,5 @@ class LibrosIndexPage(Page):
         context['libros'] = libros
 
         return context
+    
+    subpage_types = []

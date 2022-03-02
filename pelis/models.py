@@ -85,21 +85,12 @@ class PelisIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
-        decada = request.GET.get('decada')
-        qs = ''
-
-        if decada:
-            peliculas = Pelicula.objects.filter(year__gte=1990, year__lt=2000)
-            qs = f'decada={decada}'
-        else:
-            peliculas = Pelicula.objects.all()
             
-
         context['peliculas'] = Pelicula.objects.all().order_by('-rating')
-        context['qs'] = qs
 
-        
         return context
+    
+    subpage_types = []
     
     
 
