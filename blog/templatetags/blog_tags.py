@@ -5,7 +5,6 @@ from django.template import Library
 
 register = Library()
 
-
 @register.inclusion_tag('components/categories_list.html',
                         takes_context=True)
 def categories_list(context):
@@ -19,7 +18,6 @@ def categories_list(context):
                         takes_context=True)
 def noticias_list(context):
     noticias = Noticia.objects.all().order_by('-id')[:5]
-
     return {
         'request': context['request'],
         'noticias': noticias,
